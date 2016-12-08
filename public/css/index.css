@@ -1,0 +1,12 @@
+body {
+  font-size: 50px;
+  background: #9acd32;
+  color: #fff;
+}
+body div {
+  color: #f00;
+}
+body p {
+  background: #008000;
+  color: #ff0;
+}
