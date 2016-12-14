@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initisl-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+	<title>Title</title>
+	<link href="http://cdn.bootcss.com/normalize/5.0.0/normalize.css" rel="stylesheet">
+	<link rel="stylesheet" href="../../public/css/info/setting.css">
+</head>
+<body>
+	<header class="header">
+		<i class="icon-back"></i>
+		<span class="header-title">设置</span>
+	</header>
+	<article class="setting_con">
+		<section class="setting_cell">
+			<span class="need">接收需求</span>
+			<span class="setting_btn"></span>
+		</section>
+		<section class="setting_cell about">
+			<span>关于</span>
+		</section>
+		<section class="setting_cell clear" id="clear">
+			<span>清除缓存</span>
+			<span class="clear_count">7.02M</span>
+		</section>
+	</article>
+
+	<div class="logout_btn">
+		退出登录
+	</div>
+
+	<script>
+		document.getElementById('clear' ).addEventListener('touchend',function(){
+			location.href = "info_clear.html"
+		})
+	</script>
+</body>
+</html>

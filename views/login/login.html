@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initisl-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+	<title>Title</title>
+	<link href="http://cdn.bootcss.com/normalize/5.0.0/normalize.css" rel="stylesheet">
+	<link rel="stylesheet" href="../public/css/login/login.css">
+</head>
+<body>
+	<header class="header">
+		<i class="icon-back"></i>
+		<span class="header-title">登录</span>
+	</header>
+	<article class="form-list">
+		<section class="form-cell">
+			<span class="form-cell-name">账号：</span>
+			<input onblur="testVal()" class="form-cell-input" type="text" placeholder="请输入您的手机号" id="username">
+		</section>
+		<section class="form-cell">
+			<span class="form-cell-name cell-passwd">密码：</span>
+			<input onblur="testVal()" class="form-cell-input" type="password" placeholder="请输入您的账号密码" id="password">
+		</section>
+	</article>
+	<div class="bt_box">
+		<input type="submit" class="btn_login" value="登录" id="btn">
+	</div>
+	<footer class="footer">
+		<span class="footer_reg">注册</span>
+		<span class="footer_pass">忘记密码？</span>
+	</footer>
+
+	<script>
+
+			var userVal = document.getElementById('username');
+			var passVal = document.getElementById('password');
+			var btn = document.getElementById('btn');
+			function testVal(){
+				if(userVal.value != '' && passVal.value != ''){
+					btn.style.background = '#ea5404'
+				}
+			}
+
+
+	</script>
+
+</body>
+</html>
