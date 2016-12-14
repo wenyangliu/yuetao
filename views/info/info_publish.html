@@ -9,7 +9,7 @@
 </head>
 <body>
 	<header class="header">
-		<i class="icon-back"></i>
+		<i class="icon-back" ontouchend="javascript:history.back()"></i>
 		<span class="header-title">我发布的房源</span>
 	</header>
 
@@ -41,8 +41,20 @@
 			<div class="overdue-tips">
 				<p class="overdue-time">佣金：1个月</p>
 			</div>
+			<span class="delete">删除</span>
 		</section>
 	</article>
 
+	<script src="//cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+	<script src="../public/libs/zepto/touch.js"></script>
+	<script>
+		$('.overdue-cell').on('swipeLeft', function(){
+			$(this).css('left', '-65px')
+			$('.delete' ).show();
+			$('.delete' ).on('tap', function(){
+				alert('确定删除')
+			})
+		})
+	</script>
 </body>
 </html>
