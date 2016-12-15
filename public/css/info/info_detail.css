@@ -6,6 +6,7 @@ body {
   display: flex;
   height: 50px;
   background-color: #fff;
+  line-height: 50px;
 }
 .header .icon-back {
   display: block;
@@ -16,7 +17,6 @@ body {
 }
 .header .header-title {
   flex: 1;
-  line-height: 50px;
   text-align: center;
   padding-right: 50px;
   color: #ea5404;

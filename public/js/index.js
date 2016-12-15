@@ -83,4 +83,5 @@ $.ajax({
 	complete: function(res){
 		console.log('res', res);
 	}
-})
+});
+

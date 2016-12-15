@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+	<title>Title</title>
+	<link href="http://cdn.bootcss.com/normalize/5.0.0/normalize.css" rel="stylesheet">
+	<link rel="stylesheet" href="../../public/css/publish/plus_house.css">
+</head>
+<body>
+
+	<header class="header">
+		<span class="icon-back"></span>
+		<span class="header-title">新增楼盘</span>
+	</header>
+	
+	<article class="form-cells">
+		<section class="form-cell">
+			<input onblur="testVal()" class="form-input input01" type="text" placeholder="输入您想要增加的楼盘">
+		</section>
+		<section class="form-cell">
+			<input onblur="testVal()" class="form-input input02" type="text" placeholder="输入楼盘的地址">
+		</section>
+	</article>
+
+	<div class="submit-block">
+		<input type="submit" class="btn" value="确认提交">
+	</div>
+
+	<div class="mask"></div>
+	<div class="publish-alert">
+		<p class="title">提交成功，稍后会有专人与您联系</p>
+		<p class="confirm">确定</p>
+	</div>
+
+	<script src="//cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+	<script src="../public/libs/zepto/touch.js"></script>
+	<script>
+	function testVal(){
+		if($('.input01').val() != '' && $('.input02').val() != ''){
+			$('.btn' ).on('tap', function(){
+				$('.mask' ).show();
+				$('.publish-alert' ).show();
+			})
+		}
+
+	}
+
+	</script>
+</body>
+</html>

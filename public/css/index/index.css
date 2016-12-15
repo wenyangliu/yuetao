@@ -6,6 +6,7 @@ body {
   display: flex;
   height: 50px;
   background-color: #fff;
+  line-height: 50px;
 }
 .header .icon-back {
   display: block;
@@ -16,7 +17,6 @@ body {
 }
 .header .header-title {
   flex: 1;
-  line-height: 50px;
   text-align: center;
   padding-right: 50px;
   color: #ea5404;
@@ -94,6 +94,10 @@ body {
   color: #fff;
   background-color: transparent;
 }
+.header.active {
+  background: #3c3c3b;
+  position: fixed;
+}
 .header .icon-back {
   width: 65px;
   padding-left: 15px;
@@ -112,6 +116,16 @@ body {
   right: 15px;
   left: 15px;
   z-index: 5;
+}
+.search_box.active {
+  top: 10px;
+  left: 20%;
+  right: 20%;
+  position: fixed;
+}
+.search_box.active .search_input {
+  height: 32px;
+  line-height: 32px;
 }
 .search_box .search_input {
   height: 30px;
@@ -164,7 +178,7 @@ body {
 .point_box {
   position: relative;
   top: -30px;
-  z-index: 5;
+  z-index: 4;
   height: 16px;
   text-align: center;
 }
@@ -188,12 +202,20 @@ body {
   background-color: #fff;
   border-bottom: 1px solid #d6d7dc;
 }
+.query_box.active {
+  position: fixed;
+  top: 40px;
+}
 .query_box .query_block {
   flex: 1;
   position: relative;
 }
 .query_box .query_block.active {
   color: #ea5404;
+}
+.query_box .query_block.active .icon {
+  background: url("../../img/content_icon02_press@2x.png") no-repeat center 0px;
+  background-size: 10px;
 }
 .query_box .query_block .text {
   display: block;

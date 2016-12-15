@@ -62,8 +62,11 @@ autoSwipe();
 $query = $('.query_block');
 $query.on('tap', function(){
 	var i = $(this ).index();
-	$query.removeClass('active' ).eq(i).addClass('active')
-	console.log(i)
+	$query.removeClass('active' ).eq(i).addClass('active');
+	//console.log(i)
+	$('.header' ).addClass('active');
+	$('.search_box').addClass('active');
+	$('.query_box').addClass('active');
 });
 
 $('.query_price').on('tap', function(){
@@ -82,4 +85,10 @@ $('.query_price').on('tap', function(){
 $('.query_box' ).on('tap', function(){
 	$(this ).attr('top', '50px')
 	//console.log('s')
+});
+
+$(window).on('swipeUp', function(){
+	$('.header' ).addClass('active');
+	$('.search_box').addClass('active');
+	$('.query_box').addClass('active');
 });
