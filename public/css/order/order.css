@@ -2,85 +2,67 @@ body {
   background-color: #efeff4;
   font-family: Microsoft Yahei;
 }
-.tab-box {
-  height: 32px;
-  padding: 6px;
+.header {
   background-color: #fff;
-}
-.tab-bar {
-  display: flex;
-  width: 80%;
-  height: 30px;
-  margin: 0;
-  padding: 0;
-  margin: 0 auto;
-  list-style: none;
-  border-radius: 5px;
-  border: 1px solid #ea5404;
-  color: #ea5404;
-  line-height: 30px;
-}
-.tab-bar .tab-bar-cell {
-  position: relative;
-  flex: 1;
+  height: 50px;
+  line-height: 50px;
   text-align: center;
+  border-bottom: 1px solid #d6d7dc;
 }
-.tab-bar .tab-bar-cell:after {
-  content: '';
+.order-list .order-cell {
+  position: relative;
+  background-color: #fff;
+  padding: 12px;
+  margin-top: 10px;
+  height: 100px;
+  display: flex;
+}
+.order-list .order-cell .order-con {
+  padding-left: 10px;
+}
+.order-list .order-cell .order-con .order-title {
+  font-size: 14px;
+  color: #646464;
+}
+.order-list .order-cell .order-con .order-title .order-time {
+  color: #b4b4b4;
   position: absolute;
-  top: 0;
-  right: 0;
-  display: block;
-  width: 1px;
-  height: 30px;
-  background-color: #ea5404;
-}
-.tab-bar .tab-bar-cell:last-child:after {
-  content: '';
-  display: none;
-}
-.tab-bar .tab-bar-cell.active {
-  background-color: #ea5404;
-  color: #fff;
-}
-.tab-bar .tab-bar-cell .num {
-  position: absolute;
-  top: -5px;
+  right: 12px;
+  display: inline-block;
   font-size: 12px;
 }
-.demand-cells {
-  padding: 0 12px;
+.order-list .order-cell .order-con .order-title .order-time:before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: -3px;
+  width: 20px;
+  height: 20px;
+  display: block;
+  background: url("../../img/content_icon@2x.png") no-repeat center;
+  background-size: 50%;
 }
-.demand-cells .demand-cell {
-  background-color: #fff;
-  padding: 5px 0;
-  margin-top: 12px;
-  border-radius: 5px;
-  line-height: 30px;
-  box-shadow: 0 0 1px 1px #e0e0e0;
-}
-.demand-cells .demand-cell .demand-title {
-  height: 30px;
-  padding: 0 10px;
-  border-bottom: 1px solid #d6d7dc;
+.order-list .order-cell .order-con .order-text {
   font-size: 14px;
-}
-.demand-cells .demand-cell .demand-info {
-  margin: 0;
-  padding: 12px;
-  padding-bottom: 0;
-  line-height: 18px;
-  font-size: 13px;
-  color: #646464;
+  line-height: 20px;
   text-indent: 1em;
 }
-.demand-cells .demand-cell .demand-time {
-  color: #646464;
-  font-style: normal;
-  text-align: right;
+.order-list .order-cell .order-con .house-time {
+  color: #ffae6b;
   font-size: 12px;
-  padding-right: 12px;
-  margin: 0;
+}
+.order-list .order-cell .order-btn {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 54px;
+  height: 22px;
+  background-color: #ea5404;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 3px;
+  text-align: center;
+  line-height: 22px;
 }
 .footer {
   height: 50px;

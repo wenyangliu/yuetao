@@ -9,7 +9,7 @@
 </head>
 <body>
 	<header class="header">
-		<i class="icon-back">上海</i>
+		<i class="icon-back select-city">上海</i>
 		<span class="header-title">粤淘网</span>
 	</header>
 	<div class="search_box">
@@ -38,7 +38,7 @@
 			<span class="text">面积</span>
 			<i class="icon"></i>
 		</div>
-		<div class="query_block active">
+		<div class="query_block">
 			<span class="text">单价</span>
 			<i class="icon"></i>
 		</div>
@@ -49,6 +49,95 @@
 		<div class="query_price">
 			<i class="icon"></i>
 		</div>
+		<div class="down-box">
+			<ul class="box-left">
+				<li class="left-li">全部</li>
+				<li class="left-li">闵行</li>
+				<li class="left-li active">浦东</li>
+				<li class="left-li">嘉定</li>
+				<li class="left-li">宝山</li>
+				<li class="left-li">闸北</li>
+				<li class="left-li">松江</li>
+				<li class="left-li">青浦</li>
+				<li class="left-li">徐汇</li>
+			</ul>
+			<ul class="box-right">
+				<li class="right-li all">全部</li>
+				<li class="right-li">八佰伴</li>
+				<li class="right-li">川沙</li>
+				<li class="right-li">花木</li>
+				<li class="right-li">金桥</li>
+			</ul>
+		</div>
+		<div class="down-box area">
+			<ul class="box-center">
+				<li class="left-li">全部</li>
+				<li class="left-li">100m²以下</li>
+				<li class="left-li active">100-200m²</li>
+				<li class="left-li">200-300m²</li>
+				<li class="left-li">300-500m²</li>
+				<li class="left-li">500-1000m²</li>
+				<li class="left-li">1000m²以上</li>
+				<li class="left-li">
+					<input class="area-input" type="text"><span class="area-contact">--</span><input class="area-input" type="text">
+					<input type="submit" value="确定" class="area-btn">
+				</li>
+			</ul>
+		</div>
+		<div class="down-box area">
+			<ul class="box-center">
+				<li class="left-li">全部</li>
+				<li class="left-li">3元/m²/天以下</li>
+				<li class="left-li active">3-4元/m²/天</li>
+				<li class="left-li">4-5元/m²/天</li>
+				<li class="left-li">5-7元/m²/天</li>
+				<li class="left-li">7-9元/m²/天</li>
+				<li class="left-li">9-12元/m²/天</li>
+				<li class="left-li">12元/m²/天以上</li>
+				<li class="left-li">
+					<input class="area-input" type="text"><span class="area-contact">--</span><input class="area-input" type="text">
+					<input type="submit" value="确定" class="area-btn">
+				</li>
+			</ul>
+		</div>
+		<div class="down-box more">
+			<ul class="box-left">
+				<li class="left-li more-li active">地铁</li>
+				<li class="left-li more-li">房型</li>
+				<li class="left-li more-li">装修</li>
+			</ul>
+			<ul class="box-right">
+				<li class="right-li all">全部</li>
+				<li class="right-li">1号线</li>
+				<li class="right-li">2号线</li>
+				<li class="right-li">3号线</li>
+				<li class="right-li">4号线</li>
+				<li class="right-li">5号线</li>
+				<li class="right-li">6号线</li>
+				<li class="right-li">7号线</li>
+			</ul>
+			<ul class="box-right">
+				<li class="right-li all">全部</li>
+				<li class="right-li">众创空间</li>
+				<li class="right-li">商务中心</li>
+				<li class="right-li">创意产业园</li>
+				<li class="right-li">写字楼</li>
+				<li class="right-li">工位</li>
+				<li class="right-li">整栋</li>
+				<li class="right-li">整层</li>
+			</ul>
+			<ul class="box-right">
+				<li class="right-li all">全部</li>
+				<li class="right-li">豪装</li>
+				<li class="right-li">精装</li>
+				<li class="right-li">简装</li>
+				<li class="right-li">标准支付</li>
+				<li class="right-li">毛坯支付</li>
+			</ul>
+		</div>
+	</div>
+	<div class="price-tips">
+
 	</div>
 	<article class="overdue-list">
 		<section class="overdue-cell">
@@ -59,7 +148,22 @@
 				<h4>东方金融中心</h4>
 				<p>浦东-八佰伴</p>
 				<div class="overdue-btn">商务中心</div>
-				<p><span class="overdue-price">￥7</span> 元/平米/天起</p>
+				<p><span class="overdue-price">￥12</span> 元/平米/天起</p>
+			</div>
+			<div class="overdue-tips">
+				<span class="collect"></span>
+				<p class="overdue-time">佣金：1个月</p>
+			</div>
+		</section>
+		<section class="overdue-cell">
+			<div class="overdue-img">
+				<img src="../public/img/content_img_list@2x.png" alt="" width="128">
+			</div>
+			<div class="overdue-con">
+				<h4>东方金融中心</h4>
+				<p>浦东-八佰伴</p>
+				<div class="overdue-btn">商务中心</div>
+				<p><span class="overdue-price">￥10</span> 元/平米/天起</p>
 			</div>
 			<div class="overdue-tips">
 				<span class="collect"></span>
@@ -89,7 +193,7 @@
 				<h4>东方金融中心</h4>
 				<p>浦东-八佰伴</p>
 				<div class="overdue-btn">商务中心</div>
-				<p><span class="overdue-price">￥7</span> 元/平米/天起</p>
+				<p><span class="overdue-price">￥8</span> 元/平米/天起</p>
 			</div>
 			<div class="overdue-tips">
 				<span class="collect"></span>
@@ -104,22 +208,7 @@
 				<h4>东方金融中心</h4>
 				<p>浦东-八佰伴</p>
 				<div class="overdue-btn">商务中心</div>
-				<p><span class="overdue-price">￥7</span> 元/平米/天起</p>
-			</div>
-			<div class="overdue-tips">
-				<span class="collect"></span>
-				<p class="overdue-time">佣金：1个月</p>
-			</div>
-		</section>
-		<section class="overdue-cell">
-			<div class="overdue-img">
-				<img src="../public/img/content_img_list@2x.png" alt="" width="128">
-			</div>
-			<div class="overdue-con">
-				<h4>东方金融中心</h4>
-				<p>浦东-八佰伴</p>
-				<div class="overdue-btn">商务中心</div>
-				<p><span class="overdue-price">￥7</span> 元/平米/天起</p>
+				<p><span class="overdue-price">￥9</span> 元/平米/天起</p>
 			</div>
 			<div class="overdue-tips">
 				<span class="collect"></span>
@@ -127,25 +216,28 @@
 			</div>
 		</section>
 	</article>
+
 	<div class="toTop"></div>
 
+	<div class="mask"></div>
+
 	<footer class="footer">
-		<div class="footer-block active">
+		<div class="footer-block active index-icon">
 			<i class="footer-icon"></i>
 			<span class="footer-name">首页</span>
 		</div>
-		<div class="footer-block">
+		<div class="footer-block order-icon">
 			<i class="footer-icon order"></i>
 			<span class="footer-name">预约</span>
 		</div>
-		<div class="footer-block">
+		<div class="footer-block publish_icon">
 			<em class="publish-icon"></em>
 		</div>
-		<div class="footer-block">
+		<div class="footer-block news-icon">
 			<i class="footer-icon news"></i>
 			<span class="footer-name">信息</span>
 		</div>
-		<div class="footer-block">
+		<div class="footer-block info-icon">
 			<i class="footer-icon info"></i>
 			<span class="footer-name">我</span>
 		</div>

@@ -1,0 +1,60 @@
+body
+	background-color #efeff4
+	font-family Microsoft Yahei
+.header
+	background-color #fff
+	height 50px
+	line-height 50px
+	text-align center
+	border-bottom 1px solid #d6d7dc
+
+.order-list
+	.order-cell
+		position relative
+		background-color #fff
+		padding 12px
+		margin-top 10px
+		height 100px
+		display flex
+		.order-con
+			padding-left 10px
+			.order-title
+				font-size 14px
+				color #646464
+				.order-time
+					color #b4b4b4
+					position absolute
+					right 12px
+					display inline-block
+					font-size 12px
+					&:before
+						content	''
+						position absolute
+						left -20px
+						top -3px
+						width 20px
+						height 20px
+						display block
+						background url(../../img/content_icon@2x.png) no-repeat center
+						background-size 50%
+			.order-text
+				font-size 14px
+				line-height 20px
+				text-indent 1em
+			.house-time
+				color #ffae6b
+				font-size 12px
+		.order-btn
+			position absolute
+			bottom 12px
+			right 12px
+			width 54px
+			height 22px
+			background-color #ea5404
+			font-size 14px
+			color #fff
+			border-radius 3px
+			text-align center
+			line-height 22px
+
+@import '../footer.styl'

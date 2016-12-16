@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+	<title>Title</title>
+	<link href="http://cdn.bootcss.com/normalize/5.0.0/normalize.css" rel="stylesheet">
+	<link rel="stylesheet" href="../../public/css/index/select_city.css">
+</head>
+<body>
+	<header class="header">
+		<span class="icon-back">关闭</span>
+		<span class="header-title">选择城市</span>
+	</header>
+
+	<ul class="city-box">
+		<li class="city-li">北京</li>
+		<li class="city-li">上海</li>
+	</ul>
+
+
+
+
+	<script src="//cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+	<script src="../public/libs/zepto/touch.js"></script>
+	<script>
+	$('.icon-back').on('tap', function(){
+		history.back();
+	});
+	</script>
+</body>
+</html>
