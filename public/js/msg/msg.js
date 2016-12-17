@@ -1,13 +1,19 @@
 /**
  * Created by Administrator on 2016/12/14 0014.
  */
+$('.demand-cells' ).first().show().next().hide();
+$('.demand-cells' ).first().show().next().next().hide();
 
-$('.news').on('tap', function(){
-	location.href = '../msg/msg_news.html'
-});
-$('.notice').on('tap', function(){
-	location.href = '../msg/msg_notice.html'
-});
-$('.demand').on('tap', function(){
-	location.href = '../msg/msg_demand.html'
+$('.tab-bar-cell').on('tap', function(){
+	var $self = $(this);
+	var i = $self.index();
+	if($self.hasClass('active')){
+		$self.removeClass('active');
+		$('.demand-cells' ).eq(i ).hide()
+	}
+	else{
+		$('.tab-bar-cell' ).removeClass('active');
+		$self.addClass('active');
+		$('.demand-cells' ).hide().eq(i ).show();
+	}
 });

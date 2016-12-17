@@ -27,6 +27,7 @@
 			<div class="overdue-tips">
 				<p class="overdue-time">佣金：1个月</p>
 			</div>
+			<span class="delete">删除</span>
 		</section>
 		<section class="overdue-cell">
 			<div class="overdue-img">
@@ -49,12 +50,15 @@
 	<script src="../public/libs/zepto/touch.js"></script>
 	<script>
 		$('.overdue-cell').on('swipeLeft', function(){
-			$(this).css('left', '-65px')
-			$('.delete' ).show();
-			$('.delete' ).on('tap', function(){
-				alert('确定删除')
+			$(this).css('left', '-65px');
+			$(this).find('.delete' ).show();
+			$(this).find('.delete' ).on('tap', function(){
+				$(this ).parent().remove();
 			})
-		})
+		}).on('swipeRight', function(){
+			$(this).css('left', '0');
+			$(this).find('.delete' ).hide();
+		});
 	</script>
 </body>
 </html>

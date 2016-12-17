@@ -15,31 +15,31 @@
 	<article class="form-list">
 		<section class="form-cell">
 			<span class="form-cell-name cell-user">账号：</span>
-			<input class="form-cell-input" type="text" placeholder="请输入您的手机号">
+			<input id="tel" onblur="testReg()" class="form-cell-input" type="text" placeholder="请输入您的手机号">
 		</section>
 		<section class="form-cell">
 			<span class="form-cell-name cell-validate">验证码：</span>
-			<input class="form-cell-input" type="text" placeholder="请输入验证码">
+			<input id="code" onblur="testReg()" class="form-cell-input" type="text" placeholder="请输入验证码">
 			<span class="cell-code" id="cell-code">获取验证码</span>
 		</section>
 		<section class="form-cell">
 			<span class="form-cell-name cell-passwd">密码：</span>
-			<input class="form-cell-input" type="password" placeholder="请输入您的登录密码">
+			<input id="pass" onblur="testReg()" class="form-cell-input" type="password" placeholder="请输入您的登录密码">
 		</section>
 		<section class="form-cell">
 			<span class="form-cell-name cell-passwd">密码：</span>
-			<input class="form-cell-input" type="password" placeholder="请输入您的登录密码">
+			<input id="passwd" onblur="testReg()" class="form-cell-input" type="password" placeholder="请输入您的登录密码">
 		</section>
 		<section class="form-cell">
 			<span class="form-cell-name cell-iden">身份：</span>
-			<input onfocus="show()" class="form-cell-input" type="text" placeholder="经纪人">
-			<div class="cell-box" id="box">
-				<ul>
-					<li>经纪人</li>
-					<li>小业主</li>
-					<li>运营商</li>
-					<li>代理商</li>
-					<li>开发商</li>
+			<input id="iden" onfocus="show()" onblur="testReg()" class="form-cell-input" type="text" placeholder="经纪人">
+			<div class="cell-box">
+				<ul class="cell-list">
+					<li class="cell-li">经纪人</li>
+					<li class="cell-li">小业主</li>
+					<li class="cell-li">运营商</li>
+					<li class="cell-li">代理商</li>
+					<li class="cell-li">开发商</li>
 				</ul>
 			</div>
 		</section>
@@ -53,16 +53,19 @@
 		<p>注册即代表同意<a href="#">《活力矩阵用户协议》</a></p>
 	</footer>
 
+	<div class="mask"></div>
+
+	<div class="reg-alert">
+		<p class="title">注册完成，等待后天确认</p>
+		<p class="confirm">确认</p>
+	</div>
+
+
+	<script src="//cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+	<script src="../public/libs/zepto/touch.js"></script>
+	<script src="../public/js/login/login.js"></script>
 	<script>
-		function show(){
-			var box = document.getElementById('box');
-			if(box.style.display == 'none'){
-				box.style.display = 'block'
-			}
-			else {
-				box.style.display = 'none'
-			}
-		}
+
 
 		var code = document.getElementById('cell-code');
 
@@ -82,9 +85,7 @@
 				setTimeout(function() {time(o)},1000)
 			}
 		}
-//		code.onclick=function(){
-//			time(this);
-//		}
+
 		code.addEventListener('touchend', function(e){
 			time(this);
 		})

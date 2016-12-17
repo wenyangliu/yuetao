@@ -1,9 +1,7 @@
 /**
  * Created by Administrator on 2016/12/16 0016.
  */
-//$('.btn-block').on('tap', function(){
-//
-//});
+
 
 $('.header-conf').on('tap', function(){
 	$('.mask' ).show();
@@ -18,6 +16,23 @@ $('.header-conf').on('tap', function(){
 $('.tel-icon').on('tap', function(){
 	$('.mask' ).show();
 	$('.cancel-alert' ).show();
+	$('.cancel' ).on('tap', function(){
+		$('.mask' ).hide();
+		$('.cancel-alert' ).hide();
+	})
+});
+//预约看房成功
+$('.booking-room' ).on('tap', function(){
+	$('.header' ).css('background', 'none');
+	$('.icon-back' ).css('background', 'none');
+	$('.mask' ).css('background','#ccc').show();
+	$('.booking-alert' ).show();
+	$('.sure' ).on('tap', function(){
+		location.href = '../order/order_detail.html'
+	});
+	$('.cancel' ).on('tap', function(){
+		location.href = '../order/order.html'
+	})
 });
 
 $('.reson-li' ).on('tap', function(){
@@ -40,4 +55,24 @@ $('.cancel-upload').on('tap', function(){
 	$('.mask' ).show();
 	$('.upload-alert' ).show();
 });
+
+$('.change-btn').on('tap', function(){
+	location.href = '../order/booking_change.html'
+});
+
+//弹出输入时间框
+$('.time-house' ).on('tap', function(){
+	$('.mask' ).show();
+	$('.cancel-alert' ).show();
+	$('.cancel' ).on('tap', function(){
+		$('.mask' ).hide();
+		$('.cancel-alert' ).hide();
+	});
+	$('.sure' ).on('tap', function(){
+		$('.mask' ).hide();
+		$('.cancel-alert' ).hide();
+	})
+})
+
+
 

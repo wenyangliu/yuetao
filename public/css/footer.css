@@ -8,8 +8,9 @@
   display: flex;
 }
 .footer .footer-block {
-  flex: 1;
   text-align: center;
+  color: #b4b4b4;
+  flex: 1;
 }
 .footer .footer-block .footer-icon {
   width: 50px;

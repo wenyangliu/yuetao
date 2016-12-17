@@ -5,14 +5,14 @@ body {
   display: flex;
   position: fixed;
   bottom: 150px;
-  left: 60px;
+  left: 16%;
 }
 .publish-box .pubish-block {
   color: #fff;
   text-align: center;
 }
 .publish-box .pubish-block:first-child {
-  margin-right: 80px;
+  margin-right: 30%;
 }
 .publish-box .pubish-block .publish-img {
   width: 94px;

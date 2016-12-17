@@ -15,6 +15,9 @@ input
 	width 100%
 	color #fff
 	background-color transparent
+	border 0
+	background url(../../img/banner_img_shadow@2x.png) no-repeat center top
+	background-size 100% 50%
 	&.active
 		background #3c3c3b
 		position fixed
@@ -76,13 +79,17 @@ input
 	float left
 	width 375px
 	height 320px
-	background-color green
+	background url(../../img/banner_img@2x.png) no-repeat center
+	background-size 100% 100%
 	&:nth-child(2)
-		background-color pink
+		background url(../../img/banner_img02@2x.png) no-repeat center
+		background-size 100% 100%
 	&:nth-child(3)
-		background-color yellow
+		background url(../../img/content_img_home02@2x.png) no-repeat center
+		background-size 100% 100%
 	&:nth-child(4)
-		background-color yellowgreen
+		background url(../../img/content_img_home03@2x.png) no-repeat center
+		background-size 100% 100%
 .point_box
 	position relative
 	top -30px
@@ -129,6 +136,7 @@ input
 			height 15px
 			background url(../../img/content_icon02_nor@2x.png) no-repeat center 0px
 			background-size 10px
+			margin-top -5px
 		&:after
 			content ''
 			width 1px
@@ -263,12 +271,16 @@ input
 				background url(../../img/collect_icon_nor@2x.png) no-repeat
 				display block
 				background-size 50% 50%
+				&.active
+					background url(../../img/collect_icon_press@2x.png) no-repeat
+					background-size 50% 50%
 			.overdue-time
 				position absolute
 				bottom 20px
 				right 12px
 
 .toTop
+	display none
 	width 47px
 	height 47px
 	background url(../../img/content_btn_back@2x.png) no-repeat center

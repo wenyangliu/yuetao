@@ -215,6 +215,7 @@ body {
   margin: 0 auto;
   margin-bottom: 24px;
   color: #fff;
+  position: relative;
 }
 .upoad-box .upload-img {
   width: 100px;
@@ -232,6 +233,14 @@ body {
 }
 .upoad-box .upload-img .upload-txet {
   line-height: 30px;
+}
+.upoad-box .upload-img .upload-file {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 145px;
+  opacity: 0;
 }
 .mask {
   display: none;

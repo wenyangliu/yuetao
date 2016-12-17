@@ -30,10 +30,18 @@
 		退出登录
 	</div>
 
-	<script>
-		document.getElementById('clear' ).addEventListener('touchend',function(){
-			location.href = "info_clear.html"
-		})
-	</script>
+	<div class="mask"></div>
+	<div class="reg-alert">
+		<p class="title">你确定要清理缓存么？</p>
+		<p class="confirm">
+			<span class="cancel">取消</span>
+			<span class="sure">确定</span>
+		</p>
+	</div>
+
+	<script src="//cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+	<script src="../public/libs/zepto/touch.js"></script>
+	<script src="../public/js/info/href.js"></script>
+
 </body>
 </html>

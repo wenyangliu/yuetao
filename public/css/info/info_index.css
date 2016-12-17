@@ -50,6 +50,16 @@ body {
   text-align: center;
   line-height: 45px;
 }
+.s_box .s_left .count,
+.s_box .s_right .count {
+  font-weight: 600;
+  font-size: 18px;
+}
+.s_box .s_left .title,
+.s_box .s_right .title {
+  color: #727272;
+  font-size: 14px;
+}
 .s_box .s_left:after {
   content: '';
   width: 1px;
@@ -106,8 +116,9 @@ body {
   display: flex;
 }
 .footer .footer-block {
-  flex: 1;
   text-align: center;
+  color: #b4b4b4;
+  flex: 1;
 }
 .footer .footer-block .footer-icon {
   width: 50px;

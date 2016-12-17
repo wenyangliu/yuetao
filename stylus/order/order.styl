@@ -14,7 +14,7 @@ body
 		background-color #fff
 		padding 12px
 		margin-top 10px
-		height 100px
+		height 90px
 		display flex
 		.order-con
 			padding-left 10px
@@ -48,13 +48,28 @@ body
 			position absolute
 			bottom 12px
 			right 12px
-			width 54px
-			height 22px
+			padding 0 10px
 			background-color #ea5404
 			font-size 14px
 			color #fff
 			border-radius 3px
 			text-align center
 			line-height 22px
+			&.active
+				background-color #fff
+				color #323232
+
+
+		.delete
+			width 65px
+			line-height 114px
+			position fixed
+			right 0
+			margin-top -12px
+			text-align center
+			color #fff
+			background-color #ff3b30
+			display none
+
 
 @import '../footer.styl'

@@ -23,6 +23,7 @@
 				<div class="house-time">看房时间：08/08</div>
 			</div>
 			<div class="order-btn">接单</div>
+			<span class="delete">删除</span>
 		</section>
 		<section class="order-cell">
 			<div class="order-img">
@@ -33,7 +34,8 @@
 				<div class="order-text">我想看<span>【京德大楼】</span>的房源，请帮我安排，地址是常德路319号。</div>
 				<div class="house-time">看房时间：08/08</div>
 			</div>
-			<div class="order-btn">接单</div>
+			<div class="order-btn active">已接单，待反馈</div>
+			<span class="delete">删除</span>
 		</section>
 		<section class="order-cell">
 			<div class="order-img">
@@ -44,7 +46,8 @@
 				<div class="order-text">我想看<span>【京德大楼】</span>的房源，请帮我安排，地址是常德路319号。</div>
 				<div class="house-time">看房时间：08/08</div>
 			</div>
-			<div class="order-btn">接单</div>
+			<div class="order-btn active">已接单，待反馈</div>
+			<span class="delete">删除</span>
 		</section>
 		<section class="order-cell">
 			<div class="order-img">
@@ -55,7 +58,8 @@
 				<div class="order-text">我想看<span>【京德大楼】</span>的房源，请帮我安排，地址是常德路319号。</div>
 				<div class="house-time">看房时间：08/08</div>
 			</div>
-			<div class="order-btn">接单</div>
+			<div class="order-btn active">完成</div>
+			<span class="delete">删除</span>
 		</section>
 	</article>
 	<footer class="footer">
@@ -83,6 +87,26 @@
 	<script src="//cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
 	<script src="../public/libs/zepto/touch.js"></script>
 	<script src="../public/js/index/index.js"></script>
+	<script>
+		$('.order-cell').on('swipeLeft', function(){
+			$(this).css('left', '-65px');
+			$(this).find('.delete' ).show();
+			$(this).find('.delete' ).on('touchend', function(e){
+				e.stopPropagation();
+				$(this ).parent().remove();
+			});
+		}).on('swipeRight', function(){
+			$(this).css('left', '0');
+			$(this).find('.delete' ).hide();
+		});
+		$('.order-cell' ).on('tap', function(){
+			location.href = '../order/booking_detail.html';
+		});
 
+		$('.order-btn' ).on('tap', function(e){
+			e.stopPropagation();
+			$(this ).addClass('active' ).text('已接单，待反馈');
+		})
+	</script>
 </body>
 </html>

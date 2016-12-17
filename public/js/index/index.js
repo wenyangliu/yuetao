@@ -135,6 +135,7 @@ $(window).on('swipeUp', function(){
 	$('.query_box').addClass('active');
 	$('.slider_box' ).hide();
 	$('.overdue-list' ).addClass('active');
+	$('.toTop' ).show();
 });
 
 $('.select-city').on('tap', function(){
@@ -161,4 +162,15 @@ $('.info-icon').on('tap', function(){
 });
 $('.publish_icon').on('tap', function(){
 	location.href = '../publish/publish.html'
+});
+
+//返回顶部
+$('.toTop').on('tap', function(){
+	$('html,body' ).scrollTop(0);
+	$('.toTop' ).hide();
+});
+
+//点击收藏
+$('.collect' ).on('tap', function(){
+	$(this ).toggleClass('active');
 });

@@ -25,7 +25,7 @@ var $selectTitle = $('.select-title');
 var $selectList = $('.select-list');
 
 $selectTitle.on('tap', function(){
-	$(this ).siblings('.select-list' ).toggle()
+	$(this ).siblings('.select-list' ).toggle();
 });
 
 $selectList.find('.select-li').on('tap', function(){
@@ -49,4 +49,9 @@ $('.icon-back').on('tap', function(){
 
 $('.cancel').on('tap', function(){
 	location.href = '../publish/publish_house.html'
-})
+});
+
+$('.house-cell .radio-block').on('tap', function(){
+	$(this).toggleClass('selected');
+
+});

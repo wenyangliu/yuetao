@@ -32,8 +32,9 @@ body {
   display: flex;
 }
 .footer .footer-block {
-  flex: 1;
   text-align: center;
+  color: #b4b4b4;
+  flex: 1;
 }
 .footer .footer-block .footer-icon {
   width: 50px;
@@ -101,6 +102,9 @@ input {
   width: 100%;
   color: #fff;
   background-color: transparent;
+  border: 0;
+  background: url("../../img/banner_img_shadow@2x.png") no-repeat center top;
+  background-size: 100% 50%;
 }
 .header.active {
   background: #3c3c3b;
@@ -172,16 +176,20 @@ input {
   float: left;
   width: 375px;
   height: 320px;
-  background-color: #008000;
+  background: url("../../img/banner_img@2x.png") no-repeat center;
+  background-size: 100% 100%;
 }
 .slider_block:nth-child(2) {
-  background-color: #ffc0cb;
+  background: url("../../img/banner_img02@2x.png") no-repeat center;
+  background-size: 100% 100%;
 }
 .slider_block:nth-child(3) {
-  background-color: #ff0;
+  background: url("../../img/content_img_home02@2x.png") no-repeat center;
+  background-size: 100% 100%;
 }
 .slider_block:nth-child(4) {
-  background-color: #9acd32;
+  background: url("../../img/content_img_home03@2x.png") no-repeat center;
+  background-size: 100% 100%;
 }
 .point_box {
   position: relative;
@@ -238,6 +246,7 @@ input {
   height: 15px;
   background: url("../../img/content_icon02_nor@2x.png") no-repeat center 0px;
   background-size: 10px;
+  margin-top: -5px;
 }
 .query_box .query_block:after {
   content: '';
@@ -396,12 +405,17 @@ input {
   display: block;
   background-size: 50% 50%;
 }
+.overdue-list .overdue-cell .overdue-tips .collect.active {
+  background: url("../../img/collect_icon_press@2x.png") no-repeat;
+  background-size: 50% 50%;
+}
 .overdue-list .overdue-cell .overdue-tips .overdue-time {
   position: absolute;
   bottom: 20px;
   right: 12px;
 }
 .toTop {
+  display: none;
   width: 47px;
   height: 47px;
   background: url("../../img/content_btn_back@2x.png") no-repeat center;
