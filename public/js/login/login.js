@@ -24,7 +24,10 @@ function testReg(){
 	if($('#tel').val() != '' && $('#code').val() != '' && $('#pass').val() != '' && $('#passwd').val() != '' && $('#iden').val() != ''){
 		$('.btn_reg').css('background' , '#ea5404' ).on('tap', function(){
 			$('.mask' ).css('background','#ccc').show();
-			$('.reg-alert' ).show();
+			$('.publish-alert' ).show();
+			$('.confirm').on('tap', function(){
+				history.back();
+			});
 		})
 	}
 }

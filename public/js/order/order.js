@@ -10,6 +10,10 @@ $('.header-conf').on('tap', function(){
 		$('.cancel-alert' ).hide();
 		$('.publish-alert' ).show();
 	});
+	$('.cancel' ).on('tap', function(){
+		$('.mask' ).hide();
+		$('.cancel-alert' ).hide();
+	})
 });
 
 
@@ -49,11 +53,18 @@ $('.cancel-btn').on('tap', function(){
 });
 $('.upload-conf').on('tap', function(){
 	$('.mask' ).show();
-	$('.publish-alert' ).show();
+	$('.upload-alert' ).show();
 });
 $('.cancel-upload').on('tap', function(){
 	$('.mask' ).show();
-	$('.upload-alert' ).show();
+	$('.cancel-alert' ).show();
+	$('.cancel' ).on('tap', function(){
+		$('.mask' ).hide();
+		$('.cancel-alert' ).hide();
+	});
+	$('.sure' ).on('tap', function(){
+		history.back();
+	})
 });
 
 $('.change-btn').on('tap', function(){
@@ -72,7 +83,7 @@ $('.time-house' ).on('tap', function(){
 		$('.mask' ).hide();
 		$('.cancel-alert' ).hide();
 	})
-})
+});
 
 
 

@@ -36,6 +36,11 @@
 		</p>
 	</div>
 
+	<div class="publish-alert">
+		<p class="title">发布需求成功，请稍后</p>
+		<p class="confirm">确定</p>
+	</div>
+
 
 	<script src="//cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
 	<script src="../public/libs/zepto/touch.js"></script>
@@ -43,6 +48,18 @@
 		$('.icon-back' ).on('tap', function(){
 			$('.mask' ).show();
 			$('.cancel-alert' ).show();
+			$('.cancel' ).on('tap', function(){
+				$('.mask' ).hide();
+				$('.cancel-alert' ).hide();
+			});
+			$('.sure' ).on('tap', function(){
+				history.back();
+			})
+		});
+		$('.header-publish' ).on('tap', function(){
+			$('.mask' ).css('background','#A7A7AA').show();
+			$('.publish-alert' ).show();
+
 		})
 	</script>
 </body>

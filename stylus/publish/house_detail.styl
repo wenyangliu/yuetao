@@ -18,6 +18,32 @@ body
 		background url(../../img/nav_back_icon02@2x.png) no-repeat center
 		background-size 25%
 
+.slider-container
+	position relative
+	width 375px
+	height 240px
+	overflow hidden
+	.slider-text
+		position absolute
+		bottom 10px
+		left 15px
+		right 15px
+		display flex
+		color #fff
+		.price-block
+			font-size 14px
+			flex 1
+			.price
+				color #ea5404
+				font-size 16px
+		.count-block
+			flex 1
+			text-align right
+			font-size 14px
+			.count
+				font-size 18px
+
+
 .house-info
 	padding 0 12px
 	.info-cell
@@ -30,6 +56,7 @@ body
 		.info-cell-right
 			margin 0 10px
 			flex 1
+			position relative
 			.info-name
 				color #999
 				font-size 12px
@@ -40,10 +67,21 @@ body
 				.or-txt
 					color #ea5404
 					font-style normal
+		.info-cell-left
+			&:after
+				content ''
+				position absolute
+				right -10px
+				top 15px
+				width 1px
+				height 23px
+				background-color #474743
 		.one-side
 			.info-text
 				float none
 				padding-left 35px
+			&:after
+				display none
 
 	.info-txt
 		font-size 12px
@@ -99,6 +137,36 @@ body
 		padding-left 65%
 		border-top 1px solid #d6d7dc
 		border-bottom 1px solid #d6d7dc
+	.confirm
+		color #ea5404
+		display flex
+		height 45px
+		line-height 45px
+		border-top 1px solid #d6d7dc
+		margin-top 10px
+		span
+			flex 1
+			text-align center
+		.cancel
+			border-right 1px solid #d6d7dc
+			color #323232
+.booking-alert
+	display none
+	width 270px
+	background #fff
+	border-radius 10px
+	position absolute
+	left 50%
+	top 50%
+	margin-top -53px
+	margin-left -135px
+	text-align center
+	overflow hidden
+	.title
+		height 46px
+		line-height 46px
+		margin 0
+		font-size 14px
 	.confirm
 		color #ea5404
 		display flex

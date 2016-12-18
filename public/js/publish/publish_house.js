@@ -40,18 +40,29 @@ $selectList.find('.select-li').on('tap', function(){
 $('.publish-block').on('tap', function(){
 	$('.mask' ).show();
 	$('.publish-alert' ).show();
+	$('.confirm' ).on('tap', function(){
+		location.href = '../publish/house_detail.html'
+	})
 });
 
 $('.icon-back').on('tap', function(){
 	$('.mask' ).show();
 	$('.cancel-alert' ).show();
+	$('.cancel' ).on('tap', function(){
+		$('.mask' ).hide();
+		$('.cancel-alert' ).hide();
+	});
+	$('.sure' ).on('tap', function(){
+		location.href = '../publish/house_detail.html'
+	})
 });
 
-$('.cancel').on('tap', function(){
-	location.href = '../publish/publish_house.html'
-});
 
 $('.house-cell .radio-block').on('tap', function(){
 	$(this).toggleClass('selected');
 
+});
+//新增楼盘
+$('.add-house').on('tap', function(){
+	location.href = '../publish/plus_house.html'
 });

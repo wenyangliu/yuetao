@@ -34,15 +34,15 @@ $('.about').on('tap', function(){
 });
 $('.clear').on('tap', function(){
 	$('.mask' ).show();
-	$('.reg-alert' ).show();
+	$('.cancel-alert' ).show();
 	$('.cancel' ).on('tap', function(){
 		$('.mask' ).hide();
-		$('.reg-alert' ).hide();
+		$('.cancel-alert' ).hide();
 	});
 	$('.sure' ).on('tap', function(){
 		$('.clear_count' ).text('');
 		$('.mask' ).hide();
-		$('.reg-alert' ).hide();
+		$('.cancel-alert' ).hide();
 	})
 });
 $('.logout_btn').on('tap', function(){

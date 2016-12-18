@@ -59,6 +59,7 @@ function autoSwipe(){
 
 autoSwipe();
 
+
 $query = $('.query_block');
 $('.down-box' ).hide();
 $query.on('tap', function(){
@@ -97,7 +98,7 @@ $moreLi.on('tap', function(){
 
 
 
-
+//按价格排序
 $('.query_price').on('tap', function(){
 	var $self = $(this);
 	if($self.hasClass('active-down')){
@@ -128,7 +129,7 @@ $('.query_price').on('tap', function(){
 	}
 });
 
-
+//手指向上滑
 $(window).on('swipeUp', function(){
 	$('.header' ).addClass('active');
 	$('.search_box').addClass('active');
@@ -137,15 +138,18 @@ $(window).on('swipeUp', function(){
 	$('.overdue-list' ).addClass('active');
 	$('.toTop' ).show();
 });
+//手指向下滑
+$(window).on('swipeDown', function(){
+	$('.header' ).removeClass('active');
+	$('.search_box').removeClass('active');
+	$('.query_box').removeClass('active');
+	$('.slider_box' ).show();
+	$('.overdue-list' ).removeClass('active');
+	$('.toTop' ).hide();
+});
 
 $('.select-city').on('tap', function(){
 	location.href = '../index/select_city.html'
-});
-
-$('.overdue-cell').remove().sort(function(a,b){
-	return b.textContent.match(/\d+(?= 元)/) - a.textContent.match(/\d+(?= 元)/);
-}).each(function(i,e){
-	$('.overdue-list' ).append(e);
 });
 
 $('.index-icon').on('tap', function(){
