@@ -139,6 +139,7 @@ body {
   background-color: #ea5404;
   position: fixed;
   bottom: 0;
+  color: #fff;
 }
 .mask {
   display: none;

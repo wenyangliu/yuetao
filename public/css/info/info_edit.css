@@ -65,6 +65,12 @@ body {
   outline: none;
   font-family: Microsoft Yahei;
 }
+.info_cells .info-cell .complete {
+  position: absolute;
+  color: #ea5404;
+  right: 15px;
+  display: none;
+}
 .info_cells .info-cell .head {
   background: url("../../img/geren.png") no-repeat left 3px;
   background-size: 15%;

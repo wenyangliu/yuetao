@@ -26,18 +26,25 @@ function testReg(){
 			$('.mask' ).css('background','#ccc').show();
 			$('.publish-alert' ).show();
 			$('.confirm').on('tap', function(){
-				history.back();
+				location.href = '../info/info.html'
 			});
 		})
 	}
 }
 
 //选择身份
-//function show(){
-//	$('.cell-box' ).toggle();
-//	$('.cell-li' ).on('tap', function(){
-//
-//		$('#iden').val = $(this ).text()
-//	})
-//}
+
+$('.iden').on('tap', function(){
+	$('.cell-box' ).toggle();
+	$('.cell-li' ).on('tap', function(){
+		var text = $(this ).text();
+
+		var val = $(this ).data('val');
+
+		$('.iden' ).text(text ).data('val', val);
+		$('.cell-box' ).hide();
+	})
+});
+
+
 

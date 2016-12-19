@@ -66,7 +66,7 @@
 					touch.el.trigger('swipe'+ swipeDirectionFromVelocity)
 				}
 			})
-			.on('touchstart MSPointerDown pointerdown', function(e){
+			.on('touchstart', function(e){
 				if((_isPointerType = isPointerEventType(e, 'down')) &&
 				   !isPrimaryTouch(e)) return
 				firstTouch = _isPointerType ? e : e.touches[0]
@@ -89,7 +89,7 @@
 				// adds the current touch contact for IE gesture recognition
 				if (gesture && _isPointerType) gesture.addPointer(e.pointerId)
 			})
-			.on('touchmove MSPointerMove pointermove', function(e){
+			.on('touchmove', function(e){
 				if((_isPointerType = isPointerEventType(e, 'move')) &&
 				   !isPrimaryTouch(e)) return
 				firstTouch = _isPointerType ? e : e.touches[0]
@@ -100,7 +100,7 @@
 				deltaX += Math.abs(touch.x1 - touch.x2)
 				deltaY += Math.abs(touch.y1 - touch.y2)
 			})
-			.on('touchend MSPointerUp pointerup', function(e){
+			.on('touchend', function(e){
 				if((_isPointerType = isPointerEventType(e, 'up')) &&
 				   !isPrimaryTouch(e)) return
 				cancelLongTap()

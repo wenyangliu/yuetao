@@ -1,8 +1,7 @@
 /**
  * Created by Administrator on 2016/12/14 0014.
  */
-$('.demand-cells' ).first().show().next().hide();
-$('.demand-cells' ).first().show().next().next().hide();
+
 
 $('.tab-bar-cell').on('tap', function(){
 	var $self = $(this);

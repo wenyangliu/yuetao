@@ -3,7 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
-	<title>Title</title>
+	<title>粤淘网 - 杭州摆摆网络科技有限公司</title>
+	<meta name="keywords" content="杭州摆摆网络科技有限公司"/>
+	<meta name="description" content="杭州摆摆网络科技有限公司是一家互联网制作及设计的现代设计公司
+    摆摆网络将市场定位于以企业互联网电子商务平台及企业信息化建设为基点，提供全方位的设计与应用方案。以网站建设及网络营销整合作为其主打服务产品之外，摆摆网络的服务范围包括软件开发、平面设计、界面设计、网页设计等多方位优质服务。 "/>
 	<link href="http://cdn.bootcss.com/normalize/5.0.0/normalize.css" rel="stylesheet">
 	<link rel="stylesheet" href="../public/css/login/register.css">
 </head>
@@ -32,14 +35,15 @@
 		</section>
 		<section class="form-cell">
 			<span class="form-cell-name cell-iden">身份：</span>
-			<input id="iden" onfocus="show()" onblur="testReg()" class="form-cell-input" type="text" placeholder="经纪人">
+			<!--<input data-val="1" id="iden" onblur="testReg()" class="form-cell-input iden" type="text" placeholder="经纪人">-->
+			<div data-val="1" class="form-cell-input iden" onfocus="show()" onblur="testReg()">经纪人</div>
 			<div class="cell-box">
 				<ul class="cell-list">
-					<li class="cell-li">经纪人</li>
-					<li class="cell-li">小业主</li>
-					<li class="cell-li">运营商</li>
-					<li class="cell-li">代理商</li>
-					<li class="cell-li">开发商</li>
+					<li data-val="1" class="cell-li">经纪人</li>
+					<li data-val="2" class="cell-li">小业主</li>
+					<li data-val="3" class="cell-li">运营商</li>
+					<li data-val="4" class="cell-li">代理商</li>
+					<li data-val="5" class="cell-li">开发商</li>
 				</ul>
 			</div>
 		</section>

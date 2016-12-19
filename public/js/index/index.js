@@ -1,6 +1,7 @@
 /**
  * Created by Administrator on 2016/12/14 0014.
  */
+//轮播图
 var $slider = $('.slider_block');
 
 var $sliderCon = $('.slider_container');
@@ -21,7 +22,7 @@ $slider.width(wd ).height(hg);
 
 var swipeNow = 0;
 var slideTime = null;
-
+//轮播图向左滑
 $sliderCon.on('swipeLeft', function(){
 	clearTimeout(slideTime);
 
@@ -34,6 +35,7 @@ $sliderCon.on('swipeLeft', function(){
 		autoSwipe();
 	}
 });
+//轮播图向右滑
 $sliderCon.on('swipeRight', function(){
 	clearTimeout(slideTime);
 	if(swipeNow > 0){
@@ -44,7 +46,7 @@ $sliderCon.on('swipeRight', function(){
 		autoSwipe();
 	}
 });
-
+//轮播图自动
 function autoSwipe(){
 	slideTime = setTimeout(function(){
 		if(swipeNow < lg - 1){
@@ -59,7 +61,7 @@ function autoSwipe(){
 
 autoSwipe();
 
-
+//轮播图下的块
 $query = $('.query_block');
 $('.down-box' ).hide();
 $query.on('tap', function(){
@@ -86,8 +88,9 @@ $query.on('tap', function(){
 	}
 
 });
-$('.more .box-right' ).first().show().next().hide();
-$('.more .box-right' ).first().show().next().next().hide();
+
+
+
 var $moreLi = $('.more-li');
 
 $moreLi.on('tap', function(){
@@ -152,18 +155,7 @@ $('.select-city').on('tap', function(){
 	location.href = '../index/select_city.html'
 });
 
-$('.index-icon').on('tap', function(){
-	location.href = '../index/index.html'
-});
-$('.order-icon').on('tap', function(){
-	location.href = '../order/order.html'
-});
-$('.news-icon').on('tap', function(){
-	location.href = '../msg/msg_news.html'
-});
-$('.info-icon').on('tap', function(){
-	location.href = '../info/info.html'
-});
+
 $('.publish_icon').on('tap', function(){
 	location.href = '../publish/publish.html'
 });
@@ -178,3 +170,9 @@ $('.toTop').on('tap', function(){
 $('.collect' ).on('tap', function(){
 	$(this ).toggleClass('active');
 });
+
+//点击搜索
+$('.search_input').on('tap', function(){
+	location.href = '../index/index_search.html'
+});
+

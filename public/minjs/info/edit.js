@@ -1,1 +1,0 @@
-$(".image-block").on("tap",function(){$(".mask").show(),$(".upload-box").show()}),$(".cancel").on("tap",function(){$(".mask").hide(),$(".upload-box").hide()});

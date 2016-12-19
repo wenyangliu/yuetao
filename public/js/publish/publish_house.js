@@ -3,11 +3,10 @@
  */
 
 $('.search-input' ).on('focus', function(){
-	$('.close-icon' ).show();
-	$('.close-icon' ).on('tap', function(){
+	$('.close-icon' ).show().on('tap', function(){
 		$(this ).hide();
 		$('.search-input' ).val( ' ' )
-	})
+	});
 });
 
 var $radioList = $('.radio-box .radio-block');

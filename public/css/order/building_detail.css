@@ -181,6 +181,9 @@ body {
   display: flex;
   min-height: 56px;
 }
+.all-house .house-cell.even {
+  background-color: #efeff4;
+}
 .all-house .house-cell .house-img {
   width: 74px;
   height: 49px;

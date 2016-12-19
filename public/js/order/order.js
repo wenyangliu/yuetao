@@ -2,6 +2,9 @@
  * Created by Administrator on 2016/12/16 0016.
  */
 
+$('.icon-back' ).on('tap', function(){
+	history.back();
+});
 
 $('.header-conf').on('tap', function(){
 	$('.mask' ).show();
@@ -47,10 +50,16 @@ $('.reson-li' ).on('tap', function(){
 	}
 });
 
-$('.cancel-btn').on('tap', function(){
+
+$('.sure-btn').on('tap', function(){
 	$('.mask' ).show();
 	$('.cancel-order' ).show();
+	$('.confirm' ).on('tap', function(){
+		history.back();
+	});
 });
+
+
 $('.upload-conf').on('tap', function(){
 	$('.mask' ).show();
 	$('.upload-alert' ).show();
@@ -67,9 +76,18 @@ $('.cancel-upload').on('tap', function(){
 	})
 });
 
-$('.change-btn').on('tap', function(){
+//改期达成取消
+$('.change_btn').on('tap', function(){
 	location.href = '../order/booking_change.html'
 });
+$('.reach_btn').on('tap', function(){
+	location.href = '../order/upload_contract.html'
+});
+$('.cancel_btn').on('tap', function(){
+	location.href = '../order/reserve_cancel.html'
+});
+
+
 
 //弹出输入时间框
 $('.time-house' ).on('tap', function(){
@@ -84,6 +102,8 @@ $('.time-house' ).on('tap', function(){
 		$('.cancel-alert' ).hide();
 	})
 });
-
-
+//接单按钮
+$('.order-btn').on('tap', function(){
+	location.href = '../order/order_detail.html'
+});
 

@@ -42,9 +42,9 @@ app.get('/login', function(req, res){
 });
 
 
-//监听端口 9527，用来启动服务
-app.listen(9527, function(){
-	console.log('server run at port 9527');
+//监听端口 16926，用来启动服务
+app.listen(16926, function(){
+	console.log('server run at port 16926');
 });
 
 //模块导出

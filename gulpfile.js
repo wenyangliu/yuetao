@@ -26,12 +26,12 @@ gulp.task('nodemon', function(ab){
 			ft = true;
 		}
 	})
-})
+});
 //创建一个静态服务代理的任务
 gulp.task('browserSync',['nodemon'], function(){
 	browserSync.init({
 		proxy: {
-			target: 'http://127.0.0.1:9527'
+			target: 'http://127.0.0.1:16926'
 		},
 		files: ['*'],
 		port: 9888,
