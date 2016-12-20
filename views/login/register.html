@@ -54,7 +54,7 @@
 	</div>
 
 	<footer class="footer">
-		<p>注册即代表同意<a href="#">《活力矩阵用户协议》</a></p>
+		<p>注册即代表同意<a href="#">《粤淘网用户协议》</a></p>
 	</footer>
 
 	<div class="mask"></div>
@@ -68,32 +68,6 @@
 	<script src="//cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
 	<script src="../public/libs/zepto/touch.js"></script>
 	<script src="../public/js/login/login.js"></script>
-	<script>
 
-
-		var code = document.getElementById('cell-code');
-
-		var wait=60;
-
-		function time(o) {
-
-			if (wait == 0) {
-				o.innerHTML="获取验证码";
-				o.style.background = '';
-				wait = 60;
-			}
-			else {
-
-				o.innerHTML=wait+'s后重新获取';
-				o.style.background = '#c7c7c7';
-				wait--;
-				setTimeout(function() {time(o)},1000)
-			}
-		}
-
-		code.addEventListener('touchend', function(e){
-			time(this);
-		})
-	</script>
 </body>
 </html>

@@ -18,20 +18,20 @@
 	<article class="form-list">
 		<section class="form-cell">
 			<span class="form-cell-name cell-user">账号：</span>
-			<input class="form-cell-input" type="text" placeholder="请输入您的手机号">
+			<input onblur="testPass()" id="username" class="form-cell-input" type="text" placeholder="请输入您的手机号">
 		</section>
 		<section class="form-cell">
 			<span class="form-cell-name cell-validate">验证码：</span>
-			<input class="form-cell-input" type="text" placeholder="请输入验证码">
+			<input onblur="testPass()" id="code" class="form-cell-input" type="text" placeholder="请输入验证码">
 			<span class="cell-code" id="cell-code">获取验证码</span>
 		</section>
 		<section class="form-cell">
 			<span class="form-cell-name cell-passwd">密码：</span>
-			<input class="form-cell-input" type="password" placeholder="请输入您的登录密码">
+			<input onblur="testPass()" id="pass" class="form-cell-input" type="password" placeholder="请输入您的登录密码">
 		</section>
 		<section class="form-cell">
 			<span class="form-cell-name cell-passwd">密码：</span>
-			<input class="form-cell-input" type="password" placeholder="请输入您的登录密码">
+			<input onblur="testPass()" id="passwd" class="form-cell-input" type="password" placeholder="请输入您的登录密码">
 		</section>
 	</article>
 
@@ -39,30 +39,8 @@
 		<input type="submit" class="btn_reg" value="确定">
 	</div>
 
-	<script>
-
-	var code = document.getElementById('cell-code');
-
-	var wait=60;
-
-	function time(o) {
-
-		if (wait == 0) {
-			o.innerHTML="获取验证码";
-			o.style.background = '';
-			wait = 60;
-		}
-		else {
-			o.innerHTML=wait+'s后重新获取';
-			o.style.background = '#c7c7c7';
-			wait--;
-			setTimeout(function() {time(o)},1000)
-		}
-	}
-
-	code.addEventListener('touchend', function(e){
-		time(this);
-	})
-	</script>
+	<script src="//cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+	<script src="../public/libs/zepto/touch.js"></script>
+	<script src="../public/js/login/login.js"></script>
 </body>
 </html>

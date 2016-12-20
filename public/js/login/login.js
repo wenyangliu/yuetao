@@ -31,6 +31,14 @@ function testReg(){
 		})
 	}
 }
+function testPass(){
+	if($('#username').val() != '' && $('#code').val() != '' && $('#pass').val() != '' && $('#passwd').val() != ''){
+		$('.btn_reg').css('background' , '#ea5404' ).on('tap', function(){
+			location.href = '../info/info.html'
+		})
+	}
+}
+
 
 //选择身份
 
@@ -45,6 +53,30 @@ $('.iden').on('tap', function(){
 		$('.cell-box' ).hide();
 	})
 });
+
+var code = document.getElementById('cell-code');
+
+var wait=60;
+
+function time(o) {
+
+	if (wait == 0) {
+		o.innerHTML="获取验证码";
+		o.style.background = '';
+		wait = 60;
+	}
+	else {
+
+		o.innerHTML=wait+'s后重新获取';
+		o.style.background = '#c7c7c7';
+		wait--;
+		setTimeout(function() {time(o)},1000)
+	}
+}
+
+code.addEventListener('touchend', function(e){
+	time(this);
+})
 
 
 
