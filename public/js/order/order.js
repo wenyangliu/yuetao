@@ -9,17 +9,23 @@ $('.icon-back' ).on('tap', function(){
 $('.header-conf').on('tap', function(){
 	$('.mask' ).show();
 	$('.cancel-alert' ).show();
-	$('.booking-conf').on('tap', function(){
+	$('.booking-conf').on('tap', function(e){
+		e.stopPropagation();
 		$('.cancel-alert' ).hide();
 		$('.publish-alert' ).show();
-	});
+		$('.confirm' ).on('tap', function(){
+			history.back();
+		})
+	} );
+
+
 	$('.cancel' ).on('tap', function(){
 		$('.mask' ).hide();
 		$('.cancel-alert' ).hide();
 	})
 });
 
-
+//电话按钮
 $('.tel-icon').on('tap', function(){
 	$('.mask' ).show();
 	$('.cancel-alert' ).show();
@@ -41,7 +47,7 @@ $('.booking-room' ).on('tap', function(){
 		location.href = '../order/order.html'
 	})
 });
-
+//原因选择
 $('.reson-li' ).on('tap', function(){
 	var i = $(this ).index();
 	$(this).toggleClass('active');
@@ -59,10 +65,13 @@ $('.sure-btn').on('tap', function(){
 	});
 });
 
-
+//上传合同
 $('.upload-conf').on('tap', function(){
 	$('.mask' ).show();
 	$('.upload-alert' ).show();
+	$('.confirm' ).on('tap', function(){
+		history.back();
+	})
 });
 $('.cancel-upload').on('tap', function(){
 	$('.mask' ).show();
@@ -104,6 +113,6 @@ $('.time-house' ).on('tap', function(){
 });
 //接单按钮
 $('.order-btn').on('tap', function(){
-	location.href = '../order/order_detail.html'
+	location.href = '../order/booking_room.html'
 });
 

@@ -74,7 +74,6 @@ $query.on('tap', function(){
 	$('.slider_box' ).hide();
 	$('.overdue-list' ).addClass('active');
 
-
 	if($self.hasClass('active')){
 		$self.removeClass('active');
 		$('.down-box' ).eq(i ).hide();
@@ -90,7 +89,7 @@ $query.on('tap', function(){
 });
 
 
-
+//更多
 var $moreLi = $('.more-li');
 
 $moreLi.on('tap', function(){
@@ -151,11 +150,15 @@ $(window).on('swipeDown', function(){
 	$('.toTop' ).hide();
 });
 
+//点击遮罩隐藏
+$('.mask' ).on('tap', function(){
+	$(this ).hide();
+	$('.down-box' ).hide();
+});
+
 $('.select-city').on('tap', function(){
 	location.href = '../index/select_city.html'
 });
-
-
 $('.publish_icon').on('tap', function(){
 	location.href = '../publish/publish.html'
 });
