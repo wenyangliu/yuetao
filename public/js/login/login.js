@@ -76,7 +76,7 @@ function time(o) {
 
 code.addEventListener('touchend', function(e){
 	time(this);
-})
+});
 
 
 

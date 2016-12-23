@@ -60,5 +60,27 @@ $('.cancel').on('tap', function(){
 	$('.upload-box' ).hide();
 });
 
+$('.house' ).on('tap', function(){
+	$('.need' ).removeClass('active');
+	$(this ).addClass('active');
+	$('.demand-cells' ).hide();
+	$('.overdue-list' ).show();
+});
+$('.need' ).on('tap', function(){
+	$('.house' ).removeClass('active');
+	$(this ).addClass('active');
+	$('.overdue-list' ).hide();
+	$('.demand-cells' ).show();
+});
 
+$('.overdue-cell').on('swipeLeft', function(){
+	$(this).css('left', '-65px');
+	$(this).find('.delete' ).show();
+	$(this).find('.delete' ).on('tap', function(){
+		$(this ).parent().remove();
+	})
+}).on('swipeRight', function(){
+	$(this).css('left', '0');
+	$(this).find('.delete' ).hide();
+});
 
