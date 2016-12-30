@@ -66,9 +66,11 @@ body {
 }
 .slider-container {
   position: relative;
-  width: 375px;
-  height: 330px;
+  width: 100%;
   overflow: hidden;
+}
+.slider-container .slider-block img {
+  width: 100%;
 }
 .slider-container .slider-text {
   position: absolute;
@@ -308,7 +310,7 @@ body {
   border-bottom: 1px solid #d6d7dc;
 }
 .building-info .building-img img {
-  width: 351px;
+  width: 100%;
   margin-top: 15px;
 }
 .building-info .building-img .img-info {
@@ -350,10 +352,12 @@ body {
 .around-house .around-cell {
   background-color: #fff;
   margin: 0 12px 12px;
-  width: 324px;
 }
 .around-house .around-cell .around-img {
   padding: 12px;
+}
+.around-house .around-cell .around-img img {
+  width: 100%;
 }
 .around-house .around-cell .around-txt {
   padding-left: 12px;

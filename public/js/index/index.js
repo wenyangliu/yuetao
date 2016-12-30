@@ -88,6 +88,36 @@ $query.on('tap', function(){
 
 });
 
+//面积单价
+$('.area .left-li' ).on('tap', function(){
+	var $self = $(this);
+	var i = $self.index();
+	if($self.hasClass('active')){
+		$self.removeClass('active');
+	}
+	else {
+		$('.area .left-li' ).removeClass('active');
+		$self.addClass('active');
+	}
+	$('.area' ).hide();
+	$('.mask' ).hide();
+	$('.query_block' ).removeClass('active');
+});
+$('.price .left-li' ).on('tap', function(){
+	var $self = $(this);
+	var i = $self.index();
+	if($self.hasClass('active')){
+		$self.removeClass('active');
+	}
+	else {
+		$('.price .left-li' ).removeClass('active');
+		$self.addClass('active');
+	}
+	$('.price' ).hide();
+	$('.mask' ).hide();
+	$('.query_block' ).removeClass('active');
+});
+
 
 //更多
 var $moreLi = $('.more-li');
@@ -170,12 +200,18 @@ $('.toTop').on('tap', function(){
 });
 
 //点击收藏
-$('.collect' ).on('tap', function(){
+$('.collect' ).on('touchend', function(e){
+	e.stopPropagation();
 	$(this ).toggleClass('active');
 });
 
 //点击搜索
 $('.search_input').on('tap', function(){
 	location.href = '../index/index_search.html'
+});
+
+//点击内容块
+$('.overdue-cell').on('tap', function(){
+	location.href = '../order/building_detail.html'
 });
 

@@ -5,20 +5,20 @@ body {
   display: flex;
   position: fixed;
   bottom: 150px;
-  left: 16%;
+  width: 100%;
 }
 .publish-box .pubish-block {
   color: #fff;
+  margin: 0 auto;
+  width: 50%;
   text-align: center;
-}
-.publish-box .pubish-block:first-child {
-  margin-right: 30%;
 }
 .publish-box .pubish-block .publish-img {
   width: 94px;
   height: 94px;
   background: url("../../img/publish_btn02@2x.png") no-repeat;
   background-size: 100%;
+  margin: 0 auto;
 }
 .publish-box .pubish-block .img-house {
   background: url("../../img/publish_btn01@2x.png") no-repeat;

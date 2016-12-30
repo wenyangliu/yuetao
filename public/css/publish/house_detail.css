@@ -46,9 +46,11 @@ body {
 }
 .slider-container {
   position: relative;
-  width: 375px;
   height: 240px;
   overflow: hidden;
+}
+.slider-container slider-block img {
+  width: 100%;
 }
 .slider-container .slider-text {
   position: absolute;
