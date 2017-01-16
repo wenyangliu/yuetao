@@ -26,7 +26,7 @@
     
 * 启动项目
     ```
-        node app.js
+        node server.js
     ```
     
 * 访问
